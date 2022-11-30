@@ -14,6 +14,10 @@
         &:hover {
             color: var(--accent-lighter-color);
         }
+
+        span {
+            padding: 0 .5rem;
+        }
     }
 
     .sidenav-buttons {

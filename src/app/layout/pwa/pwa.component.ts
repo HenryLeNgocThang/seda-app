@@ -23,7 +23,7 @@ export class PwaComponent implements OnInit {
     this.modalVersion = false;
   }
 
-  public ngOnInit(): void {
+  ngOnInit(): void {
     this.updateOnlineStatus();
 
     window.addEventListener('online',  this.updateOnlineStatus.bind(this));
@@ -44,7 +44,6 @@ export class PwaComponent implements OnInit {
 
   private updateOnlineStatus(): void {
     this.isOnline = window.navigator.onLine;
-    console.info(`isOnline=[${this.isOnline}]`);
   }
 
   public updateVersion(): void {

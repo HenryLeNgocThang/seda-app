@@ -3,13 +3,13 @@
         <a routerLink="/home">
             <img src="/assets/icons/icon-72x72.png" alt="Seda App">
         </a>
-        <a mat-button color="accent" routerLink="/home" class="btn btn-success pull-right">
+        <a mat-button color="accent" routerLink="/home">
             <mat-icon aria-hidden="false" aria-label="home icon" fontIcon="home"></mat-icon>
-            Home
+            <span>Home</span>
         </a>
-        <a mat-button color="accent" [routerLink]="['quiz']" class="btn btn-success pull-right">
+        <a mat-button color="accent" [routerLink]="['quiz']">
             <mat-icon aria-hidden="false" aria-label="quiz icon" fontIcon="quiz"></mat-icon>
-            Quiz
+            <span>Quiz</span>
         </a>
     </div>
 </div>

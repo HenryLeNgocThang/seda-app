@@ -4,13 +4,15 @@
   </mat-drawer>
 
   <div class="main">
-    <pwa></pwa>
+    <header></header>
 
-    <button type="button" mat-button (click)="drawer.toggle(); drawerToggled = !drawerToggled">
+    <button class="white" id="drawer-toggler" type="button" mat-button (click)="drawer.toggle(); drawerToggled = !drawerToggled">
       <mat-icon aria-hidden="false" *ngIf="!drawerToggled" aria-label="arrow_back_ios icon" fontIcon="arrow_back_ios"></mat-icon>
       <mat-icon aria-hidden="false" *ngIf="drawerToggled" aria-label="arrow_forward_ios icon" fontIcon="arrow_forward_ios"></mat-icon>
     </button>
 
-    <router-outlet></router-outlet>
+    <div class="main-content">
+      <router-outlet></router-outlet>
+    </div>
   </div>
 </mat-drawer-container>
