@@ -1,6 +1,15 @@
 <div class="sidenav-content">
-    <ul>
-        <li><a routerLink="/home" class="btn btn-success pull-right">Home</a></li>
-        <li><a [routerLink]="['quiz']" class="btn btn-success pull-right">Quiz</a></li>
-    </ul>
+    <div class="sidenav-buttons">
+        <a routerLink="/home">
+            <img src="/assets/icons/icon-72x72.png" alt="Seda App">
+        </a>
+        <a mat-button color="accent" routerLink="/home" class="btn btn-success pull-right">
+            <mat-icon aria-hidden="false" aria-label="home icon" fontIcon="home"></mat-icon>
+            Home
+        </a>
+        <a mat-button color="accent" [routerLink]="['quiz']" class="btn btn-success pull-right">
+            <mat-icon aria-hidden="false" aria-label="quiz icon" fontIcon="quiz"></mat-icon>
+            Quiz
+        </a>
+    </div>
 </div>

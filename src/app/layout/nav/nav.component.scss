@@ -1,4 +1,22 @@
 .sidenav-content {
-    min-width: 300px;
+    min-width: 250px;
     height: 100%;
+    background-color: var(--text-accent-lighter-color);
+
+    a {
+        width: 100%;
+        text-decoration: none;
+        display: flex;
+        justify-content: start;
+        color: var(--accent-color);
+        transition: all .3s ease-in-out;
+        
+        &:hover {
+            color: var(--accent-lighter-color);
+        }
+    }
+
+    .sidenav-buttons {
+        padding: 2rem;
+    }
 }

@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 
 // Layout components
 import { NavComponent } from './layout/nav/nav.component';
+import { PwaComponent } from './layout/pwa/pwa.component';
 import { HeaderComponent } from './layout/header/header.component';
 
 // Pages (routing pages)
@@ -20,6 +21,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     QuizComponent,
     NavComponent,
     HeaderComponent,
+    PwaComponent,
   ],
   imports: [
     BrowserModule,
