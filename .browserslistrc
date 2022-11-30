@@ -10,7 +10,10 @@
 
 last 1 Chrome version
 last 1 Firefox version
-last 2 Edge major versions
-last 2 Safari major versions
-last 2 iOS major versions
+last 2 Edge versions
+last 2 Safari versions
+last 2 iOS versions
 Firefox ESR
+
+# Angular supports IE 11 only as an opt-in. To opt-in, remove the 'not' prefix on the line below.
+not IE 11
