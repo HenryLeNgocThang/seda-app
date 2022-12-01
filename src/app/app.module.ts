@@ -5,7 +5,9 @@ import { MaterialModule } from './material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { environment } from '../environments/environment';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
+// Main component
 import { AppComponent } from './app.component';
 
 // Layout components
@@ -13,17 +15,27 @@ import { NavComponent } from './layout/nav/nav.component';
 import { PwaComponent } from './layout/pwa/pwa.component';
 import { HeaderComponent } from './layout/header/header.component';
 
-// Pages (routing pages)
+// "Pages" (routing pages)
+import { HomeComponent } from './main/home/home.component';
 import { QuizComponent } from './main/quiz/quiz.component';
-import { ServiceWorkerModule } from '@angular/service-worker';
+import { SickNoteComponent } from './main/sick-note/sick-note.component';
+import { HolidayRequestsComponent } from './main/holiday-requests/holiday-requests.component';
+import { CalendarComponent } from './main/calendar/calendar.component';
 
 @NgModule({
   declarations: [
+    // Main component
     AppComponent,
-    QuizComponent,
+    // Layout components
     NavComponent,
     HeaderComponent,
     PwaComponent,
+    // "Pages"
+    HomeComponent,
+    QuizComponent,
+    SickNoteComponent,
+    HolidayRequestsComponent,
+    CalendarComponent,
   ],
   imports: [
     BrowserModule,

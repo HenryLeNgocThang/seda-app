@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { MatDrawer } from '@angular/material/sidenav'
+import { MatDrawer } from '@angular/material/sidenav';
+import { Platform } from '@angular/cdk/platform';
 
 @Component({
   selector: 'sidenav',
@@ -9,12 +10,15 @@ import { MatDrawer } from '@angular/material/sidenav'
 
 export class NavComponent {
   constructor (
+    private platform: Platform,
     private _matDrawer: MatDrawer
   ) {
     this.Init();
   }
 
   Init(): void {
-    this._matDrawer.toggle();
+    if (!this.platform.ANDROID && !this.platform.IOS) {
+      this._matDrawer.toggle();
+    }
   }
 }
