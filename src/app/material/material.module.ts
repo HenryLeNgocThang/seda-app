@@ -1,12 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+// Material Core
+import { MatNativeDateModule } from '@angular/material/core';
+
 // Material Form Controls
 // import { MatAutocompleteModule } from '@angular/material/autocomplete';
 // import { MatCheckboxModule } from '@angular/material/checkbox';
-// import { MatDatepickerModule } from '@angular/material/datepicker';
-// import { MatFormFieldModule } from '@angular/material/form-field';
-// import { MatInputModule } from '@angular/material/input';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 // import { MatRadioModule } from '@angular/material/radio';
 // import { MatSelectModule } from '@angular/material/select';
 // import { MatSliderModule } from '@angular/material/slider';
@@ -18,7 +21,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 // import { MatToolbarModule } from '@angular/material/toolbar';
 
 // Material Layout
-// import { MatCardModule } from '@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
 // import { MatDividerModule } from '@angular/material/divider';
 // import { MatExpansionModule } from '@angular/material/expansion';
 // import { MatGridListModule } from '@angular/material/grid-list';
@@ -44,9 +47,9 @@ import { MatIconModule } from '@angular/material/icon';
 // import { MatTooltipModule } from '@angular/material/tooltip';
 
 // Material Data tables
-// import { MatPaginatorModule } from '@angular/material/paginator';
-// import { MatSortModule } from '@angular/material/sort';
-// import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [],
@@ -54,9 +57,10 @@ import { MatIconModule } from '@angular/material/icon';
     CommonModule,
     // MatAutocompleteModule,
     // MatCheckboxModule,
-    // MatDatepickerModule,
-    // MatFormFieldModule,
-    // MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatFormFieldModule,
+    MatInputModule,
     // MatRadioModule,
     // MatSelectModule,
     // MatSliderModule,
@@ -64,7 +68,7 @@ import { MatIconModule } from '@angular/material/icon';
     // MatMenuModule,
     MatSidenavModule,
     // MatToolbarModule,
-    // MatCardModule,
+    MatCardModule,
     // MatDividerModule,
     // MatExpansionModule,
     // MatGridListModule,
@@ -84,16 +88,16 @@ import { MatIconModule } from '@angular/material/icon';
     // MatDialogModule,
     // MatSnackBarModule,
     // MatTooltipModule,
-    // MatPaginatorModule,
-    // MatSortModule,
-    // MatTableModule
+    MatPaginatorModule,
+    MatSortModule,
+    MatTableModule
   ],
   exports: [
     // MatAutocompleteModule,
     // MatCheckboxModule,
-    // MatDatepickerModule,
-    // MatFormFieldModule,
-    // MatInputModule,
+    MatDatepickerModule,
+    MatFormFieldModule,
+    MatInputModule,
     // MatRadioModule,
     // MatSelectModule,
     // MatSliderModule,
@@ -101,7 +105,7 @@ import { MatIconModule } from '@angular/material/icon';
     // MatMenuModule,
     MatSidenavModule,
     // MatToolbarModule,
-    // MatCardModule,
+    MatCardModule,
     // MatDividerModule,
     // MatExpansionModule,
     // MatGridListModule,
@@ -121,9 +125,9 @@ import { MatIconModule } from '@angular/material/icon';
     // MatDialogModule,
     // MatSnackBarModule,
     // MatTooltipModule,
-    // MatPaginatorModule,
-    // MatSortModule,
-    // MatTableModule
+    MatPaginatorModule,
+    MatSortModule,
+    MatTableModule
   ]
 })
 
