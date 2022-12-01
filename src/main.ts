@@ -6,9 +6,9 @@ import { environment } from './environments/environment';
 
 if (environment.production) {
   enableProdMode();
-}
 
-setTimeout(() => {
-  platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.error(err));
-}, 300);
+  setTimeout(() => {
+    platformBrowserDynamic().bootstrapModule(AppModule)
+    .catch(err => console.error(err));
+  }, 1000);
+}
