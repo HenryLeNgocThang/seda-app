@@ -1,8 +1,10 @@
-.nav-headline {
-    flex-grow: 1;
-    text-align: center;
-}
-
-.nav-status {
-    flex-shrink: 1;
+.nav {
+    .nav-headline {
+        flex-grow: 1;
+        text-align: center;
+    }
+    
+    .nav-status {
+        flex-shrink: 1;
+    }
 }

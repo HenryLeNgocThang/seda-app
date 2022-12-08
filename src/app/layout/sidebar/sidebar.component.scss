@@ -1,5 +1,6 @@
-.sidenav-content {
+.sidebar-content {
     min-width: 250px;
+    max-width: 300px;
     height: 100%;
     background-color: var(--text-accent-lighter-color);
 
@@ -8,8 +9,11 @@
         text-decoration: none;
         display: flex;
         justify-content: start;
+        align-items: center;
         color: var(--accent-color);
         transition: all .3s ease-in-out;
+        word-break: break-word;
+        hyphens: auto;
         
         &:hover {
             color: var(--accent-lighter-color);
@@ -20,7 +24,7 @@
         }
     }
 
-    .sidenav-buttons {
+    .sidebar-buttons {
         padding: 2rem;
     }
 }

@@ -1,0 +1,50 @@
+<div class="sidebar-content">
+  <div class="sidebar-buttons">
+    <a routerLink="/home" class="mb-4">
+      <img width="200" src="/assets/icons/logo.png" alt="Seda App">
+    </a>
+    <a class="mt-2 py-1 d-flex align-items-center" mat-button color="accent" routerLink="/home">
+      <mat-icon aria-hidden="false" aria-label="home icon" fontIcon="home"></mat-icon>
+      <span>Home</span>
+    </a>
+    <a class="mt-2 py-1 d-flex align-items-center" mat-button color="accent" [routerLink]="['quiz']">
+      <mat-icon aria-hidden="false" aria-label="quiz icon" fontIcon="quiz"></mat-icon>
+      <span>Quiz</span>
+    </a>
+    <a class="mt-2 py-1 d-flex align-items-center" mat-button color="accent" [routerLink]="['payroll']">
+      <mat-icon aria-hidden="false" aria-label="sick icon" fontIcon="sick"></mat-icon>
+      <span>Lohnabrechnung</span>
+    </a>
+    <a class="mt-2 py-1 d-flex align-items-center" mat-button color="accent" [routerLink]="['payroll']">
+      <mat-icon aria-hidden="false" aria-label="sick icon" fontIcon="sick"></mat-icon>
+      <span>Lohnbescheinigung</span>
+    </a>
+
+    <!-- <mdb-accordion>
+      <mdb-accordion-item>
+        <ng-template mdbAccordionItemHeader>Lohn</ng-template>
+        <ng-template mdbAccordionItemBody>
+          <a class="mt-2 py-1 d-flex align-items-center" mat-button color="accent" [routerLink]="['payroll']">
+            Lohnabrechnung
+          </a>
+          <a class="mt-2 py-1 d-flex align-items-center" mat-button color="accent" [routerLink]="['payroll']">
+            Lohnbescheinigung
+          </a>
+        </ng-template>
+      </mdb-accordion-item>
+    </mdb-accordion> -->
+
+    <a class="mt-2 py-1 d-flex align-items-center" mat-button color="accent" [routerLink]="['sick-note']">
+      <mat-icon aria-hidden="false" aria-label="sick icon" fontIcon="sick"></mat-icon>
+      <span>Krankmeldung</span>
+    </a>
+    <a class="mt-2 py-1 d-flex align-items-center" mat-button color="accent" [routerLink]="['holiday-requests']">
+      <mat-icon aria-hidden="false" aria-label="post_add icon" fontIcon="post_add"></mat-icon>
+      <span>Urlaubsanträge</span>
+    </a>
+    <a class="mt-2 py-1 d-flex align-items-center" mat-button color="accent" [routerLink]="['calendar']">
+      <mat-icon aria-hidden="false" aria-label="calendar_month icon" fontIcon="calendar_month"></mat-icon>
+      <span>Kalender</span>
+    </a>
+  </div>
+</div>

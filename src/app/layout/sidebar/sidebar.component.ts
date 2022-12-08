@@ -3,12 +3,12 @@ import { MatDrawer } from '@angular/material/sidenav';
 import { Platform } from '@angular/cdk/platform';
 
 @Component({
-  selector: 'sidenav',
-  templateUrl: './nav.component.html',
-  styleUrls: ['./nav.component.scss']
+  selector: 'sidebar',
+  templateUrl: './sidebar.component.html',
+  styleUrls: ['./sidebar.component.scss']
 })
 
-export class NavComponent {
+export class SidebarComponent {
   constructor (
     private platform: Platform,
     private _matDrawer: MatDrawer

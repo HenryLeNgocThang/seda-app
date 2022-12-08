@@ -1,32 +1,26 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { HomeComponent } from './main/home/home.component';
-import { QuizComponent } from './main/quiz/quiz.component';
-import { SickNoteComponent } from './main/sick-note/sick-note.component';
-import { HolidayRequestsComponent } from './main/holiday-requests/holiday-requests.component';
-import { CalendarComponent } from './main/calendar/calendar.component';
-
 const routes: Routes = [
   {
     path: 'home',
-    component: HomeComponent
+    loadChildren: () => import('./main/home/home.module').then((m) => m.HomeModule),
   },
   {
     path: 'quiz',
-    component: QuizComponent
+    loadChildren: () => import('./main/quiz/quiz.module').then(m => m.QuizModule)
   },
   {
     path: 'sick-note',
-    component: SickNoteComponent
+    loadChildren: () => import('./main/sick-note/sick-note.module').then((m) => m.SickNoteModule),
   },
   {
     path: 'holiday-requests',
-    component: HolidayRequestsComponent
+    loadChildren: () => import('./main/holiday-requests/holiday-requests.module').then((m) => m.HolidayRequestModule),
   },
   {
     path: 'calendar',
-    component: CalendarComponent
+    loadChildren: () => import('./main/calendar/calendar.module').then((m) => m.CalendarModule),
   },
   {
     path: '', redirectTo: 'home', pathMatch: 'full'

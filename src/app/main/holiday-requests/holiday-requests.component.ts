@@ -1,4 +1,6 @@
 import { Component, AfterViewInit, ViewChild } from '@angular/core';
+import { appModuleAnimation } from '../../shared/animations/routerTransition';
+
 import { LiveAnnouncer } from '@angular/cdk/a11y';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
@@ -35,9 +37,9 @@ const ELEMENT_DATA: PeriodicElement[] = [
 ];
 
 @Component({
-  selector: 'app-holiday-requests',
   templateUrl: './holiday-requests.component.html',
-  styleUrls: ['./holiday-requests.component.scss']
+  styleUrls: ['./holiday-requests.component.scss'],
+  animations: [appModuleAnimation()]
 })
 export class HolidayRequestsComponent implements AfterViewInit {
   @ViewChild(MatPaginator) paginator: MatPaginator = <MatPaginator>{};

@@ -1,0 +1,149 @@
+[
+  {
+    "category": "JavaScript",
+    "questions": [
+      {
+        "id": 0,
+        "question": "Welchen Vorteil bietet const im gegensatz zu var?",
+        "options": [
+          {
+            "answer": "ding",
+            "isCorrect": false
+          },
+          {
+            "answer": "dong",
+            "isCorrect": false
+          },
+          {
+            "answer": "dang",
+            "isCorrect": false
+          },
+          {
+            "answer": "tinh",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "id": 0,
+        "question": "Was ist ein Array",
+        "options": [
+          {
+            "answer": "ding",
+            "isCorrect": false
+          },
+          {
+            "answer": "dong",
+            "isCorrect": false
+          },
+          {
+            "answer": "dang",
+            "isCorrect": false
+          },
+          {
+            "answer": "tinh",
+            "isCorrect": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Java",
+    "questions": [
+      {
+        "id": 0,
+        "question": "Welchen Vorteil bietet const im gegensatz zu var?",
+        "options": [
+          {
+            "answer": "ding",
+            "isCorrect": false
+          },
+          {
+            "answer": "dong",
+            "isCorrect": false
+          },
+          {
+            "answer": "dang",
+            "isCorrect": false
+          },
+          {
+            "answer": "tinh",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "id": 0,
+        "question": "Was ist ein Array",
+        "options": [
+          {
+            "answer": "ding",
+            "isCorrect": false
+          },
+          {
+            "answer": "dong",
+            "isCorrect": false
+          },
+          {
+            "answer": "dang",
+            "isCorrect": false
+          },
+          {
+            "answer": "tinh",
+            "isCorrect": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "PHP",
+    "questions": [
+      {
+        "id": 0,
+        "question": "Welchen Vorteil bietet const im gegensatz zu var?",
+        "options": [
+          {
+            "answer": "ding",
+            "isCorrect": false
+          },
+          {
+            "answer": "dong",
+            "isCorrect": false
+          },
+          {
+            "answer": "dang",
+            "isCorrect": false
+          },
+          {
+            "answer": "tinh",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "id": 0,
+        "question": "Was ist ein Array",
+        "options": [
+          {
+            "answer": "ding",
+            "isCorrect": false
+          },
+          {
+            "answer": "dong",
+            "isCorrect": false
+          },
+          {
+            "answer": "dang",
+            "isCorrect": false
+          },
+          {
+            "answer": "tinh",
+            "isCorrect": true
+          }
+        ]
+      }
+    ]
+  }
+]
