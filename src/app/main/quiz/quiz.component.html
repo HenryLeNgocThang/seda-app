@@ -1,11 +1,12 @@
 <div [@routerTransition] class="quiz-content">
   <div class="row">
-    <div class="col-12" *ngIf="quizzes">
+    <div class="col-12">
       <h1>Kategorien</h1>
     </div>
-    <div class="col-12 col-md-6 mb-4" *ngFor="let quiz of quizzes">
-      <a class="quiz-link d-flex align-items-center shadow-sm bg-body rounded p-3 fs-6" mat-button color="accent" [routerLink]="['category', quiz.category]">
-        {{quiz.category}}
+
+    <div class="col-12 col-md-6 mb-4" *ngFor="let quiz of quizData | keyvalue">
+      <a class="quiz-link d-flex align-items-center shadow-sm bg-body rounded p-3 fs-6" mat-button color="accent" [routerLink]="['category', quiz.key]">
+        {{quiz.key}}
       </a>
     </div>
   </div>

@@ -1,6 +1,5 @@
-[
-  {
-    "category": "JavaScript",
+{
+  "JavaScript": {
     "questions": [
       {
         "id": 0,
@@ -48,8 +47,7 @@
       }
     ]
   },
-  {
-    "category": "Java",
+  "PHP": {
     "questions": [
       {
         "id": 0,
@@ -97,8 +95,7 @@
       }
     ]
   },
-  {
-    "category": "PHP",
+  "Java": {
     "questions": [
       {
         "id": 0,
@@ -146,4 +143,4 @@
       }
     ]
   }
-]
+}

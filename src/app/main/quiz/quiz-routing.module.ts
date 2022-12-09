@@ -12,7 +12,7 @@ const routes: Routes = [
     {
         path: 'category/:category',
         component: CategoryComponent,
-        pathMatch: 'full',
+        pathMatch: 'full'
     },
 ];
 

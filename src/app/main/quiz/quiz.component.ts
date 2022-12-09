@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { appModuleAnimation } from '../../shared/animations/routerTransition';
-import data from '../../../assets/data/quizzes.json';
+import { QuizService } from '../../services/quiz/quiz.service';
 
 @Component({
   templateUrl: './quiz.component.html',
@@ -8,10 +8,13 @@ import data from '../../../assets/data/quizzes.json';
   animations: [appModuleAnimation()]
 })
 export class QuizComponent {
-  score: number = 0;
-  quizzes = data;
+  quizData: any = [];
 
-  constructor() {
-    console.log(this.quizzes);
+  constructor(
+    private _quizService: QuizService
+  ) {
+    this._quizService.subscribe((data: Object) => {
+      this.quizData = data
+    });
   }
 }
