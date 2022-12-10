@@ -5,6 +5,12 @@ import { dataChange } from '../../../shared/animations/dataUpdateTransition';
 
 import { QuizService } from '../../../services/quiz/quiz.service';
 
+interface QuizStates {
+  0: 'start',
+  1: 'progress',
+  2: 'end'
+}
+
 @Component({
   templateUrl: './category.component.html',
   styleUrls: ['./category.component.scss'],
@@ -14,18 +20,25 @@ import { QuizService } from '../../../services/quiz/quiz.service';
   ]
 })
 export class CategoryComponent {
+  // Data from JSON
   quizData: any = [];
   category: string = '';
+  technicalName: string = '';
   question: any = {};
   options: Object[] = [];
+  categoryVideo: string = '';
 
+  // Helper variables
   pageIndex: number = 0;
-
+  quizStates: QuizStates = {
+    0: 'start',
+    1: 'progress',
+    2: 'end'
+  }
+  quizState: string = this.quizStates[0];
   correctAnswers: number = 0;
   isDisabled: boolean = false;
-  isQuizEnd: boolean = false;
   animationUpdateState: 'entering' | 'done' = 'done';
-
   history: any = [];
 
   constructor(
@@ -33,31 +46,40 @@ export class CategoryComponent {
     private activatedRoute: ActivatedRoute,
   ) {
     this.activatedRoute.params.subscribe(params => {
-      this.category = params['category'];
+      this.technicalName = params['category'];
     });
 
     this._quizService.subscribe(data => {
       this.quizData = data;
-      this.history = data;
+      this.history = this.quizData;
+      this.category = this.quizData.category;
+      this.categoryVideo = `/assets/video/${this.quizData.video}`;
       this.handlePage();
-    }, this.category);
+    }, this.technicalName);
   }
 
-  handlePage(showResults?: boolean): void {
+  handlePage(state?: string): void {
     this.handleTransition();
-
-    if (showResults) {
-      this.isQuizEnd = showResults;
-      return;
-    }
-
     this.isDisabled = false;
 
-    if (this.pageIndex < this.quizData.questions.length) {
-      this.question = this.quizData.questions[this.pageIndex];
-      this.options = this.shuffle(this.question.options);
-      this.pageIndex++;
-      return;
+    switch (state) {
+      case 'start':
+        this.pageIndex = 1;
+        this.quizState = this.quizStates[0];
+        break;
+      case 'progress':
+          this.quizState = this.quizStates[1];
+        break;
+      case 'end':
+          this.quizState = this.quizStates[2];
+        break;
+      default:
+        if (this.pageIndex < this.quizData.questions.length) {
+          this.question = this.quizData.questions[this.pageIndex];
+          this.options = this.shuffle(this.question.options);
+          this.pageIndex++;
+        }
+        break;
     }
   }
 

@@ -8,7 +8,25 @@
       <mat-card *ngIf="question">
         <mat-card-content>
 
-          <div class="row" *ngIf="!isQuizEnd">
+          <div class="row" *ngIf="quizState === 'start'">
+            <div class="col-12">
+              <h2>Lernvideo</h2>
+            </div>
+            <div class="col-12 mb-4">
+              <video width="480" height="360" controls>
+                <source [src]="categoryVideo" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="col-12">
+              <button mat-raised-button color="primary" (click)="handlePage('progress')">
+                <mat-icon aria-hidden="false" aria-label="play_arrow icon" fontIcon="play_arrow"></mat-icon> Quiz
+                starten
+              </button>
+            </div>
+          </div>
+
+          <div class="row" *ngIf="quizState === 'progress'">
             <div class="col-12">
               <h2>Frage {{pageIndex}} von {{quizData.questions.length}}</h2>
             </div>
@@ -18,32 +36,38 @@
             <div class="col-12">
               <div class="row">
                 <div class="col-12 col-md-6 mb-4" *ngFor="let option of question.options; let i = index">
-                  <button
-                    color="primary"
-                    [disabled]="isDisabled"
-                    class="quiz-button w-100 py-3 fs-4"
-                    [ngClass]="{'correct-answer': option.isCorrect && isDisabled}"
-                    mat-raised-button
-                    (click)="handleSelectedOption($event, option.isCorrect, i)"
-                  >{{option.option}}</button>
+                  <button color="primary" [disabled]="isDisabled" class="quiz-button w-100 py-3 fs-4"
+                    [ngClass]="{'correct-answer': option.isCorrect && isDisabled}" mat-raised-button
+                    (click)="handleSelectedOption($event, option.isCorrect, i)">{{option.option}}</button>
                 </div>
               </div>
             </div>
             <div class="col-12" *ngIf="isDisabled && pageIndex < quizData.questions.length">
               <button class="float-end fs-5" mat-raised-button color="accent" (click)="handlePage()">
-                Nächste Frage <mat-icon aria-hidden="false" aria-label="arrow_forward_ios icon" fontIcon="arrow_forward_ios"></mat-icon>
+                Nächste Frage <mat-icon aria-hidden="false" aria-label="arrow_forward_ios icon"
+                  fontIcon="arrow_forward_ios"></mat-icon>
               </button>
             </div>
             <div class="col-12" *ngIf="isDisabled && pageIndex === quizData.questions.length">
-              <button class="float-end fs-5" mat-raised-button color="accent" (click)="handlePage(true)">
-                Ergebnis anzeigen <mat-icon aria-hidden="false" aria-label="arrow_forward_ios icon" fontIcon="arrow_forward_ios"></mat-icon>
+              <button class="float-end fs-5" mat-raised-button color="accent" (click)="handlePage('end')">
+                Ergebnis anzeigen <mat-icon aria-hidden="false" aria-label="arrow_forward_ios icon"
+                  fontIcon="arrow_forward_ios"></mat-icon>
               </button>
             </div>
           </div>
 
-          <div class="row" *ngIf="isQuizEnd">
+          <div class="row" *ngIf="quizState === 'end'">
             <div class="col-12">
-              <h2>Frage {{pageIndex}} von {{quizData.questions.length}}</h2>
+              <div class="row">
+                <div class="col-lg-6">
+                  <h2>Übersicht</h2>
+                </div>
+                <div class="col-lg-6">
+                  <button class="w-auto float-end" mat-raised-button color="accent" (click)="handlePage('start'); pageIndex === 1">
+                    <mat-icon aria-hidden="false" aria-label="replay icon" fontIcon="replay"></mat-icon> Quiz neu starten
+                  </button>
+                </div>
+              </div>
             </div>
             <div class="col-12 fs-4 mb-4 lh-sm">
               <p>{{correctAnswers}} von {{quizData.questions.length}} Fragen richtig beantwortet.</p>
