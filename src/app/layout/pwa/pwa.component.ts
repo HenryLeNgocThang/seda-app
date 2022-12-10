@@ -10,18 +10,15 @@ import { filter, map } from 'rxjs/operators';
 })
 
 export class PwaComponent implements OnInit {
-  isOnline: boolean;
-  modalVersion: boolean;
+  isOnline: boolean = false;
+  modalVersion: boolean = false;
   modalPwaEvent: any;
   modalPwaPlatform: string|undefined;
 
   constructor(
     private platform: Platform,
     private swUpdate: SwUpdate
-  ) {
-    this.isOnline = false;
-    this.modalVersion = false;
-  }
+  ) {}
 
   ngOnInit(): void {
     this.updateOnlineStatus();
