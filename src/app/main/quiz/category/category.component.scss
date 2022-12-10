@@ -1,0 +1,15 @@
+.wrong-answer {
+    background-color: var(--mdb-danger) !important;
+    color: var(--mdb-black) !important;
+}
+
+.correct-answer {
+    background-color: var(--mdb-success) !important;
+    color: var(--mdb-black) !important;
+}
+
+::ng-deep {
+    .mat-button-wrapper {
+        pointer-events: none;
+    }
+}

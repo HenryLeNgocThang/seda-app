@@ -7,6 +7,7 @@ import { QuizService } from '../../../services/quiz/quiz.service';
 
 @Component({
   templateUrl: './category.component.html',
+  styleUrls: ['./category.component.scss'],
   animations: [
     appModuleAnimation(),
     dataChange
@@ -17,8 +18,12 @@ export class CategoryComponent {
   category: string = '';
   question: any = {};
   options: Object[] = [];
-  correctAnswers: number = 0;
+
   pageIndex: number = 0;
+
+  correctAnswers: number = 0;
+  isDisabled: boolean = false;
+  isQuizEnd: boolean = false;
   animationUpdateState: 'entering' | 'done' = 'done';
 
   constructor(
@@ -35,7 +40,14 @@ export class CategoryComponent {
     }, this.category);
   }
 
-  handlePage(): void {
+  handlePage(showResults?: boolean): void {
+    if (showResults) {
+      this.isQuizEnd = showResults;
+      return;
+    }
+
+    this.isDisabled = false;
+
     if (this.pageIndex < this.quizData.questions.length) {
       this.question = this.quizData.questions[this.pageIndex];
       this.options = this.shuffle(this.question.options);
@@ -43,17 +55,25 @@ export class CategoryComponent {
       this.handleTransition();
       return;
     }
-
-    console.log(this.correctAnswers);
   }
 
   handleTransition(): void {
     this.animationUpdateState = "entering";
   }
 
-  handleSelectedOption(isCorrect: boolean): void {
-    if (isCorrect) this.correctAnswers++;
-    this.handlePage();
+  handleSelectedOption(event: any, isCorrect: boolean): void {
+    this.isDisabled = true;
+
+    if (isCorrect) {
+      this.correctAnswers++;
+      event.target.classList.add('correct-answer');
+      return;
+    }
+
+    if (!isCorrect) {
+      event.target.classList.add('wrong-answer');
+      return;
+    }
   }
 
   shuffle<T>(array: T[]): T[] {

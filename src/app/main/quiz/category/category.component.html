@@ -7,7 +7,8 @@
     <div class="col-12">
       <mat-card *ngIf="question">
         <mat-card-content>
-          <div class="row">
+
+          <div class="row" *ngIf="!isQuizEnd">
             <div class="col-12">
               <h2>Frage {{pageIndex}} von {{quizData.questions.length}}</h2>
             </div>
@@ -18,16 +19,35 @@
               <div class="row">
                 <div class="col-12 col-md-6 mb-4" *ngFor="let option of question.options">
                   <button
-                    class="w-100 py-4 px-2 fs-5"
-                    mat-raised-button color="primary"
-                    (click)="handleSelectedOption(option.isCorrect)"
+                    color="primary"
+                    [disabled]="isDisabled"
+                    class="quiz-button w-100 py-4 px-2 fs-5"
+                    [ngClass]="{'correct-answer': option.isCorrect && isDisabled}"
+                    mat-raised-button
+                    (click)="handleSelectedOption($event, option.isCorrect)"
                   >
                     {{option.option}}
                   </button>
                 </div>
               </div>
             </div>
+            <div class="col-12" *ngIf="isDisabled && pageIndex < quizData.questions.length">
+              <button class="float-end" mat-raised-button color="primary" (click)="handlePage()">Nächste Frage</button>
+            </div>
+            <div class="col-12" *ngIf="isDisabled && pageIndex === quizData.questions.length">
+              <button class="float-end" mat-raised-button color="primary" (click)="handlePage(true)">Ergebnis anzeigen</button>
+            </div>
           </div>
+
+          <div class="row" *ngIf="isQuizEnd">
+            <div class="col-12">
+              <h2>Frage {{pageIndex}} von {{quizData.questions.length}}</h2>
+            </div>
+            <div class="col-12 fs-4 mb-4 lh-sm">
+              <p>{{correctAnswers}} von {{quizData.questions.length}} Fragen richtig beantwortet.</p>
+            </div>
+          </div>
+
         </mat-card-content>
       </mat-card>
     </div>
