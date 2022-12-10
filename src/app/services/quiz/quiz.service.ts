@@ -4,6 +4,7 @@ import data from '../../../assets/data/quizzes.json';
 @Injectable({
   providedIn: 'root'
 })
+
 export class QuizService {
   quizData: Object = {};
 

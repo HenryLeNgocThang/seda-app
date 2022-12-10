@@ -9,12 +9,22 @@ import { QuizService } from '../../services/quiz/quiz.service';
 })
 export class QuizComponent {
   quizData: any = [];
+  categories: string[] = [];
+  technicalNames: string[] = [];
 
   constructor(
     private _quizService: QuizService
   ) {
     this._quizService.subscribe((data: Object) => {
-      this.quizData = data
+      this.quizData = data;
+
+      for (const key in this.quizData) {
+        if (Object.prototype.hasOwnProperty.call(this.quizData, key)) {
+          const element = this.quizData[key as typeof this.quizData];
+          this.categories.push(element.category);
+          this.technicalNames.push(element.technicalName);
+        }
+      }
     });
   }
 }

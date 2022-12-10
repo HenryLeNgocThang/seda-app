@@ -1,6 +1,6 @@
 <div [@routerTransition] class="category-content">
 
-  <div class="row">
+  <div class="row" [@dataChange]="animationUpdateState" (@dataChange.done)="animationUpdateState = 'done'">
     <div class="col-12">
       <h1>{{category}}</h1>
     </div>
@@ -9,20 +9,20 @@
         <mat-card-content>
           <div class="row">
             <div class="col-12">
-              <h2>Frage {{pageIndex}}</h2>
+              <h2>Frage {{pageIndex}} von {{quizData.questions.length}}</h2>
             </div>
-            <div class="col-12 fs-4 mb-4">
+            <div class="col-12 fs-4 mb-4 lh-sm">
               <p>{{question.question}}</p>
             </div>
             <div class="col-12">
               <div class="row">
-                <div class="col-12 col-md-6 mb-4" *ngFor="let answer of question.options">
+                <div class="col-12 col-md-6 mb-4" *ngFor="let option of question.options">
                   <button
                     class="w-100 py-4 px-2 fs-5"
                     mat-raised-button color="primary"
-                    (click)="handleSelectedAnswer(answer.isCorrect)"
+                    (click)="handleSelectedOption(option.isCorrect)"
                   >
-                    {{answer.answer}}
+                    {{option.option}}
                   </button>
                 </div>
               </div>

@@ -1,142 +1,230 @@
 {
-  "JavaScript": {
+  "Produktionsmaschine_01": {
+    "category": "Produktionsmaschine 01",
+    "technicalName": "Produktionsmaschine_01",
     "questions": [
       {
-        "id": 0,
-        "question": "Welchen Vorteil bietet const im gegensatz zu var?",
+        "id": 1,
+        "question": "Welches Passwort muss nach dem Einschalten des Rechners eingegeben werden?",
         "options": [
           {
-            "answer": "ding",
+            "option": "WLAN-Passwort",
             "isCorrect": false
           },
           {
-            "answer": "dong",
+            "option": "persönliches Passwort",
             "isCorrect": false
           },
           {
-            "answer": "dang",
+            "option": "Gar keins",
             "isCorrect": false
           },
           {
-            "answer": "tinh",
+            "option": "Festplattenverschlüsselung (BitLocker)",
             "isCorrect": true
           }
         ]
       },
       {
-        "id": 0,
-        "question": "Was ist ein Array",
+        "id": 2,
+        "question": "Mit welchen zwei Möglichkeit kann man sich am Rechner anmelden?",
         "options": [
           {
-            "answer": "ding",
+            "option": "Festplattenverschlüsselung & BitLocker",
             "isCorrect": false
           },
           {
-            "answer": "dong",
+            "option": "WLAN-Passwort & BitLocker",
             "isCorrect": false
           },
           {
-            "answer": "dang",
+            "option": "Gar keins",
             "isCorrect": false
           },
           {
-            "answer": "tinh",
+            "option": "Eigenen Benutzernamen (Windows) & PKI",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "question": "Welcher Button muss bei den Anmeldeoptionen angeklickt werden, um sich mit Smartcard (= PKI) anmelden zu können?",
+        "options": [
+          {
+            "option": "Schlüssel-Button",
+            "isCorrect": false
+          },
+          {
+            "option": "Pfeil nach rechts-Button",
+            "isCorrect": false
+          },
+          {
+            "option": "Gar keins",
+            "isCorrect": false
+          },
+          {
+            "option": "Karten-Button",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "question": "Auf was ist zu achten bei der Anmeldung mit PKI und der PIN?",
+        "options": [
+          {
+            "option": "Schlüssel-Button anklicken",
+            "isCorrect": false
+          },
+          {
+            "option": "Eingabe des persönlichen Passworts",
+            "isCorrect": false
+          },
+          {
+            "option": "Gar nichts",
+            "isCorrect": false
+          },
+          {
+            "option": "Ausweis muss im Leser gesteckt sein",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "question": "Wie kann ich den Benutzernamen wechseln, wenn ein anderer Benutzer angezeigt wird?",
+        "options": [
+          {
+            "option": "Rechner neu starten",
+            "isCorrect": false
+          },
+          {
+            "option": "Schlüssel-Button anklicken",
+            "isCorrect": false
+          },
+          {
+            "option": "Das ist nicht möglich",
+            "isCorrect": false
+          },
+          {
+            "option": "'Other user' anklicken",
             "isCorrect": true
           }
         ]
       }
     ]
   },
-  "PHP": {
+  "Produktionsmaschine_02": {
+    "category": "Produktionsmaschine 02",
+    "technicalName": "Produktionsmaschine_02",
     "questions": [
       {
-        "id": 0,
-        "question": "Welchen Vorteil bietet const im gegensatz zu var?",
+        "id": 1,
+        "question": "Welches Passwort muss nach dem Einschalten des Rechners eingegeben werden?",
         "options": [
           {
-            "answer": "ding",
+            "option": "WLAN-Passwort",
             "isCorrect": false
           },
           {
-            "answer": "dong",
+            "option": "persönliches Passwort",
             "isCorrect": false
           },
           {
-            "answer": "dang",
+            "option": "Gar keins",
             "isCorrect": false
           },
           {
-            "answer": "tinh",
+            "option": "Festplattenverschlüsselung (BitLocker)",
             "isCorrect": true
           }
         ]
       },
       {
-        "id": 0,
-        "question": "Was ist ein Array",
+        "id": 2,
+        "question": "Mit welchen zwei Möglichkeit kann man sich am Rechner anmelden?",
         "options": [
           {
-            "answer": "ding",
+            "option": "Festplattenverschlüsselung & BitLocker",
             "isCorrect": false
           },
           {
-            "answer": "dong",
+            "option": "WLAN-Passwort & BitLocker",
             "isCorrect": false
           },
           {
-            "answer": "dang",
+            "option": "Gar keins",
             "isCorrect": false
           },
           {
-            "answer": "tinh",
-            "isCorrect": true
-          }
-        ]
-      }
-    ]
-  },
-  "Java": {
-    "questions": [
-      {
-        "id": 0,
-        "question": "Welchen Vorteil bietet const im gegensatz zu var?",
-        "options": [
-          {
-            "answer": "ding",
-            "isCorrect": false
-          },
-          {
-            "answer": "dong",
-            "isCorrect": false
-          },
-          {
-            "answer": "dang",
-            "isCorrect": false
-          },
-          {
-            "answer": "tinh",
+            "option": "Eigenen Benutzernamen (Windows) & PKI",
             "isCorrect": true
           }
         ]
       },
       {
-        "id": 0,
-        "question": "Was ist ein Array",
+        "id": 3,
+        "question": "Welcher Button muss bei den Anmeldeoptionen angeklickt werden, um sich mit Smartcard (= PKI) anmelden zu können?",
         "options": [
           {
-            "answer": "ding",
+            "option": "Schlüssel-Button",
             "isCorrect": false
           },
           {
-            "answer": "dong",
+            "option": "Pfeil nach rechts-Button",
             "isCorrect": false
           },
           {
-            "answer": "dang",
+            "option": "Gar keins",
             "isCorrect": false
           },
           {
-            "answer": "tinh",
+            "option": "Karten-Button",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "question": "Auf was ist zu achten bei der Anmeldung mit PKI und der PIN?",
+        "options": [
+          {
+            "option": "Schlüssel-Button anklicken",
+            "isCorrect": false
+          },
+          {
+            "option": "Eingabe des persönlichen Passworts",
+            "isCorrect": false
+          },
+          {
+            "option": "Gar nichts",
+            "isCorrect": false
+          },
+          {
+            "option": "Ausweis muss im Leser gesteckt sein",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "question": "Wie kann ich den Benutzernamen wechseln, wenn ein anderer Benutzer angezeigt wird?",
+        "options": [
+          {
+            "option": "Rechner neu starten",
+            "isCorrect": false
+          },
+          {
+            "option": "Schlüssel-Button anklicken",
+            "isCorrect": false
+          },
+          {
+            "option": "Das ist nicht möglich",
+            "isCorrect": false
+          },
+          {
+            "option": "'Other user' anklicken",
             "isCorrect": true
           }
         ]
