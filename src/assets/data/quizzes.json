@@ -9,19 +9,23 @@
         "options": [
           {
             "option": "WLAN-Passwort",
-            "isCorrect": false
+            "isCorrect": false,
+            "isChosen": false
           },
           {
             "option": "persönliches Passwort",
-            "isCorrect": false
+            "isCorrect": false,
+            "isChosen": false
           },
           {
             "option": "Gar keins",
-            "isCorrect": false
+            "isCorrect": false,
+            "isChosen": false
           },
           {
             "option": "Festplattenverschlüsselung (BitLocker)",
-            "isCorrect": true
+            "isCorrect": true,
+            "isChosen": false
           }
         ]
       },
@@ -31,19 +35,23 @@
         "options": [
           {
             "option": "Festplattenverschlüsselung & BitLocker",
-            "isCorrect": false
+            "isCorrect": false,
+            "isChosen": false
           },
           {
             "option": "WLAN-Passwort & BitLocker",
-            "isCorrect": false
+            "isCorrect": false,
+            "isChosen": false
           },
           {
             "option": "Gar keins",
-            "isCorrect": false
+            "isCorrect": false,
+            "isChosen": false
           },
           {
             "option": "Eigenen Benutzernamen (Windows) & PKI",
-            "isCorrect": true
+            "isCorrect": true,
+            "isChosen": false
           }
         ]
       },
@@ -53,19 +61,23 @@
         "options": [
           {
             "option": "Schlüssel-Button",
-            "isCorrect": false
+            "isCorrect": false,
+            "isChosen": false
           },
           {
             "option": "Pfeil nach rechts-Button",
-            "isCorrect": false
+            "isCorrect": false,
+            "isChosen": false
           },
           {
             "option": "Gar keins",
-            "isCorrect": false
+            "isCorrect": false,
+            "isChosen": false
           },
           {
             "option": "Karten-Button",
-            "isCorrect": true
+            "isCorrect": true,
+            "isChosen": false
           }
         ]
       },
@@ -75,19 +87,23 @@
         "options": [
           {
             "option": "Schlüssel-Button anklicken",
-            "isCorrect": false
+            "isCorrect": false,
+            "isChosen": false
           },
           {
             "option": "Eingabe des persönlichen Passworts",
-            "isCorrect": false
+            "isCorrect": false,
+            "isChosen": false
           },
           {
             "option": "Gar nichts",
-            "isCorrect": false
+            "isCorrect": false,
+            "isChosen": false
           },
           {
             "option": "Ausweis muss im Leser gesteckt sein",
-            "isCorrect": true
+            "isCorrect": true,
+            "isChosen": false
           }
         ]
       },
@@ -97,19 +113,23 @@
         "options": [
           {
             "option": "Rechner neu starten",
-            "isCorrect": false
+            "isCorrect": false,
+            "isChosen": false
           },
           {
             "option": "Schlüssel-Button anklicken",
-            "isCorrect": false
+            "isCorrect": false,
+            "isChosen": false
           },
           {
             "option": "Das ist nicht möglich",
-            "isCorrect": false
+            "isCorrect": false,
+            "isChosen": false
           },
           {
             "option": "'Other user' anklicken",
-            "isCorrect": true
+            "isCorrect": true,
+            "isChosen": false
           }
         ]
       }
@@ -125,19 +145,23 @@
         "options": [
           {
             "option": "WLAN-Passwort",
-            "isCorrect": false
+            "isCorrect": false,
+            "isChosen": false
           },
           {
             "option": "persönliches Passwort",
-            "isCorrect": false
+            "isCorrect": false,
+            "isChosen": false
           },
           {
             "option": "Gar keins",
-            "isCorrect": false
+            "isCorrect": false,
+            "isChosen": false
           },
           {
             "option": "Festplattenverschlüsselung (BitLocker)",
-            "isCorrect": true
+            "isCorrect": true,
+            "isChosen": false
           }
         ]
       },
@@ -147,19 +171,23 @@
         "options": [
           {
             "option": "Festplattenverschlüsselung & BitLocker",
-            "isCorrect": false
+            "isCorrect": false,
+            "isChosen": false
           },
           {
             "option": "WLAN-Passwort & BitLocker",
-            "isCorrect": false
+            "isCorrect": false,
+            "isChosen": false
           },
           {
             "option": "Gar keins",
-            "isCorrect": false
+            "isCorrect": false,
+            "isChosen": false
           },
           {
             "option": "Eigenen Benutzernamen (Windows) & PKI",
-            "isCorrect": true
+            "isCorrect": true,
+            "isChosen": false
           }
         ]
       },
@@ -169,19 +197,23 @@
         "options": [
           {
             "option": "Schlüssel-Button",
-            "isCorrect": false
+            "isCorrect": false,
+            "isChosen": false
           },
           {
             "option": "Pfeil nach rechts-Button",
-            "isCorrect": false
+            "isCorrect": false,
+            "isChosen": false
           },
           {
             "option": "Gar keins",
-            "isCorrect": false
+            "isCorrect": false,
+            "isChosen": false
           },
           {
             "option": "Karten-Button",
-            "isCorrect": true
+            "isCorrect": true,
+            "isChosen": false
           }
         ]
       },
@@ -191,19 +223,23 @@
         "options": [
           {
             "option": "Schlüssel-Button anklicken",
-            "isCorrect": false
+            "isCorrect": false,
+            "isChosen": false
           },
           {
             "option": "Eingabe des persönlichen Passworts",
-            "isCorrect": false
+            "isCorrect": false,
+            "isChosen": false
           },
           {
             "option": "Gar nichts",
-            "isCorrect": false
+            "isCorrect": false,
+            "isChosen": false
           },
           {
             "option": "Ausweis muss im Leser gesteckt sein",
-            "isCorrect": true
+            "isCorrect": true,
+            "isChosen": false
           }
         ]
       },
@@ -213,19 +249,23 @@
         "options": [
           {
             "option": "Rechner neu starten",
-            "isCorrect": false
+            "isCorrect": false,
+            "isChosen": false
           },
           {
             "option": "Schlüssel-Button anklicken",
-            "isCorrect": false
+            "isCorrect": false,
+            "isChosen": false
           },
           {
             "option": "Das ist nicht möglich",
-            "isCorrect": false
+            "isCorrect": false,
+            "isChosen": false
           },
           {
             "option": "'Other user' anklicken",
-            "isCorrect": true
+            "isCorrect": true,
+            "isChosen": false
           }
         ]
       }

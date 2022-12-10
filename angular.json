@@ -116,6 +116,12 @@
             "scripts": []
           }
         }
+      },
+      "i18n": {
+        "sourceLocale": {
+          "code": "de",
+          "baseHref": ""
+        }
       }
     }
   },

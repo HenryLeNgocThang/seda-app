@@ -22,6 +22,7 @@
     "@angular/pwa": "^14.0.1",
     "@angular/router": "^14.0.1",
     "@angular/service-worker": "^14.0.1",
+    "@angular/localize": "^14.2.12",
     "@schematics/angular": "^14.0.1",
     "angular-bootstrap-md": "^14.0.0",
     "chart.js": "^3.1.1",

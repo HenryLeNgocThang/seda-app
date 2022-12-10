@@ -1,14 +1,13 @@
 <div class="main position-relative">
   <mat-drawer-container autosize>
     <mat-drawer #drawer [mode]="mode" class="sidebar">
-      <sidebar></sidebar>
+      <sidebar (uploaded)="drawer.toggle()"></sidebar>
     </mat-drawer>
   
     <header></header>
     
     <button class="white" id="drawer-toggler" type="button" mat-stroked-button (click)="drawer.toggle(); drawerToggled = !drawerToggled">
-      <mat-icon aria-hidden="false" *ngIf="!drawerToggled" aria-label="close icon" fontIcon="close"></mat-icon>
-      <mat-icon aria-hidden="false" *ngIf="drawerToggled" aria-label="menu icon" fontIcon="menu"></mat-icon>
+      <mat-icon aria-hidden="false" aria-label="menu icon" fontIcon="menu"></mat-icon>
     </button>
   
     <div class="main-content">

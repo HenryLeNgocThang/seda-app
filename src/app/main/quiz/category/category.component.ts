@@ -26,6 +26,8 @@ export class CategoryComponent {
   isQuizEnd: boolean = false;
   animationUpdateState: 'entering' | 'done' = 'done';
 
+  history: any = [];
+
   constructor(
     private _quizService: QuizService,
     private activatedRoute: ActivatedRoute,
@@ -36,11 +38,14 @@ export class CategoryComponent {
 
     this._quizService.subscribe(data => {
       this.quizData = data;
+      this.history = data;
       this.handlePage();
     }, this.category);
   }
 
   handlePage(showResults?: boolean): void {
+    this.handleTransition();
+
     if (showResults) {
       this.isQuizEnd = showResults;
       return;
@@ -52,7 +57,6 @@ export class CategoryComponent {
       this.question = this.quizData.questions[this.pageIndex];
       this.options = this.shuffle(this.question.options);
       this.pageIndex++;
-      this.handleTransition();
       return;
     }
   }
@@ -61,8 +65,9 @@ export class CategoryComponent {
     this.animationUpdateState = "entering";
   }
 
-  handleSelectedOption(event: any, isCorrect: boolean): void {
+  handleSelectedOption(event: any, isCorrect: boolean, index: number): void {
     this.isDisabled = true;
+    this.history.questions[this.pageIndex - 1].options[index]['isChosen'] = true;
 
     if (isCorrect) {
       this.correctAnswers++;
@@ -77,7 +82,7 @@ export class CategoryComponent {
   }
 
   shuffle<T>(array: T[]): T[] {
-    let currentIndex = array.length,  randomIndex;
+    let currentIndex = array.length, randomIndex;
 
     while (currentIndex != 0) {
       randomIndex = Math.floor(Math.random() * currentIndex);
