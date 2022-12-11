@@ -1,5 +1,5 @@
-import { Component, Input } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { appModuleAnimation } from '../../../shared/animations/routerTransition';
 import { dataChange } from '../../../shared/animations/dataUpdateTransition';
 
@@ -44,21 +44,22 @@ export class CategoryComponent {
   constructor(
     private _quizService: QuizService,
     private activatedRoute: ActivatedRoute,
+    private router: Router,
   ) {
-    this.initQuiz();
-  }
-
-  initQuiz(): void {
     this.activatedRoute.params.subscribe(params => {
       this.technicalName = params['category'];
     });
 
+    this.getQuizData();
+    this.handlePage('start');
+  }
+
+  getQuizData(): void {
     this._quizService.subscribe(data => {
       this.quizData = data;
       this.history = this.quizData.questions;
       this.category = this.quizData.category;
       this.categoryVideo = `/assets/video/${this.quizData.video}`;
-      this.handlePage();
     }, this.technicalName);
   }
 
@@ -66,15 +67,19 @@ export class CategoryComponent {
     this.handleTransition();
     this.isDisabled = false;
 
-    // WTF warum wird this.quizData überschrieben und wo? isChosen wird hier überschrieben
-    console.log(this.quizData.questions);
-
     switch (state) {
       case 'start':
         this.correctAnswers = 0;
         this.pageIndex = 0;
         this.question = this.quizData.questions[this.pageIndex];
-        this.history = this.quizData.questions;
+        
+        this.history.forEach((question: any) => {
+          question.options.forEach((option: any) => {
+            option.isChosen = false;
+          });
+        });
+
+        this.pageIndex++;
         this.quizState = this.quizStates[0];
         break;
       case 'progress':
@@ -99,7 +104,7 @@ export class CategoryComponent {
 
   handleSelectedOption(event: any, isCorrect: boolean, index: number): void {
     this.isDisabled = true;
-    this.history[this.pageIndex - 1].options[index]['isChosen'] = true;
+    this.history[this.pageIndex - 1].options[index].isChosen = true;
 
     if (isCorrect) {
       this.correctAnswers++;
