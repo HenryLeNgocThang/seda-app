@@ -45,6 +45,10 @@ export class CategoryComponent {
     private _quizService: QuizService,
     private activatedRoute: ActivatedRoute,
   ) {
+    this.initQuiz();
+  }
+
+  initQuiz(): void {
     this.activatedRoute.params.subscribe(params => {
       this.technicalName = params['category'];
     });
@@ -62,16 +66,22 @@ export class CategoryComponent {
     this.handleTransition();
     this.isDisabled = false;
 
+    // WTF warum wird this.quizData überschrieben und wo? isChosen wird hier überschrieben
+    console.log(this.quizData.questions);
+
     switch (state) {
       case 'start':
-        this.pageIndex = 1;
+        this.correctAnswers = 0;
+        this.pageIndex = 0;
+        this.question = this.quizData.questions[this.pageIndex];
+        this.history = this.quizData.questions;
         this.quizState = this.quizStates[0];
         break;
       case 'progress':
-          this.quizState = this.quizStates[1];
+        this.quizState = this.quizStates[1];
         break;
       case 'end':
-          this.quizState = this.quizStates[2];
+        this.quizState = this.quizStates[2];
         break;
       default:
         if (this.pageIndex < this.quizData.questions.length) {

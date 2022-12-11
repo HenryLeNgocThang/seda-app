@@ -30,7 +30,7 @@
             <div class="col-12">
               <h2>Frage {{pageIndex}} von {{quizData.questions.length}}</h2>
             </div>
-            <div class="col-12 fs-4 mb-4 lh-sm">
+            <div class="col-12 fs-5 mb-4 lh-sm">
               <p>{{question.question}}</p>
             </div>
             <div class="col-12">
@@ -63,31 +63,34 @@
                   <h2>Übersicht</h2>
                 </div>
                 <div class="col-md-6">
-                  <button class="w-auto float-end" mat-raised-button color="accent" (click)="handlePage('start'); pageIndex === 1">
+                  <button class="w-auto float-end" mat-raised-button color="accent" (click)="handlePage('start')">
                     <mat-icon aria-hidden="false" aria-label="replay icon" fontIcon="replay"></mat-icon> Quiz neu starten
                   </button>
                 </div>
               </div>
             </div>
-            <div class="col-12 fs-4 mb-4 lh-sm">
+            <div class="col-12 fs-5 mb-4 lh-sm">
               <p>{{correctAnswers}} von {{quizData.questions.length}} Fragen richtig beantwortet.</p>
             </div>
             <div class="col-12">
               <div class="row">
-                <div class="col-12 col-md-6 mb-4" *ngFor="let question of history; let i = index">
-                  <!-- <button
-                    color="primary"
-                    disabled="true"
-                    class="quiz-button w-100 py-3 px-2 fs-4"
-                    [ngClass]="{'correct-answer': option.isCorrect}"
-                    mat-raised-button
-                  >{{option.option}}</button> -->
-                  <div *ngFor="let option of question.options[i]; j = index">
-                    <code>
-                      <pre>
-                        {{option|json}}
-                      </pre>
-                    </code>
+                <div class="col-12 mb-4" *ngFor="let question of history; let i = index">
+                  <div class="row">
+                    <div class="col-12 fs-5 mb-4 lh-sm">
+                      <p>{{question.question}}</p>
+                    </div>
+                    <div class="col-12 col-md-6" *ngFor="let option of question.options">
+                      <button
+                        color="primary"
+                        disabled="true"
+                        class="quiz-button w-100 py-3 px-2 fs-4 mb-4"
+                        [ngClass]="{
+                          'correct-answer': option.isCorrect,
+                          'wrong-answer': !option.isCorrect && option.isChosen
+                        }"
+                        mat-raised-button
+                      >{{option.option}}</button>
+                    </div>
                   </div>
                 </div>
               </div>
