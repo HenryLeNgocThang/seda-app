@@ -59,10 +59,10 @@
           <div class="row" *ngIf="quizState === 'end'">
             <div class="col-12">
               <div class="row">
-                <div class="col-lg-6">
+                <div class="col-md-6">
                   <h2>Übersicht</h2>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-md-6">
                   <button class="w-auto float-end" mat-raised-button color="accent" (click)="handlePage('start'); pageIndex === 1">
                     <mat-icon aria-hidden="false" aria-label="replay icon" fontIcon="replay"></mat-icon> Quiz neu starten
                   </button>
@@ -72,16 +72,25 @@
             <div class="col-12 fs-4 mb-4 lh-sm">
               <p>{{correctAnswers}} von {{quizData.questions.length}} Fragen richtig beantwortet.</p>
             </div>
-            <div class="col-12 col-md-6 mb-4" *ngFor="let option of history.options; let i = index">
-              <!-- <button
-                color="primary"
-                disabled="true"
-                class="quiz-button w-100 py-3 px-2 fs-4"
-                [ngClass]="{'correct-answer': option.isCorrect}"
-                mat-raised-button
-              >{{option.option}}</button> -->
-
-              {{option|json}}
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12 col-md-6 mb-4" *ngFor="let question of history; let i = index">
+                  <!-- <button
+                    color="primary"
+                    disabled="true"
+                    class="quiz-button w-100 py-3 px-2 fs-4"
+                    [ngClass]="{'correct-answer': option.isCorrect}"
+                    mat-raised-button
+                  >{{option.option}}</button> -->
+                  <div *ngFor="let option of question.options[i]; j = index">
+                    <code>
+                      <pre>
+                        {{option|json}}
+                      </pre>
+                    </code>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 

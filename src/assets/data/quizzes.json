@@ -136,9 +136,10 @@
       }
     ]
   },
-  "Produktionsmaschine_02": {
-    "category": "Produktionsmaschine 02",
-    "technicalName": "Produktionsmaschine_02",
+  "PC_Grundlagen_-_Hochfahren_und_Anmelden_am_Rechner_0": {
+    "video": "pc-grundlagen_-_hochfahren-und-anmelden-am-rechner.mp4",
+    "category": "PC Grundlagen - Hochfahren und Anmelden am Rechner",
+    "technicalName": "PC_Grundlagen_-_Hochfahren_und_Anmelden_am_Rechner",
     "questions": [
       {
         "id": 1,
