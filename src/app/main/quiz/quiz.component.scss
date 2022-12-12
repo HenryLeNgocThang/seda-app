@@ -4,3 +4,12 @@
         display: block;
     }
 }
+
+::ng-deep {
+    .mat-button-wrapper {
+        pointer-events: none;
+        hyphens: auto;
+        white-space: break-spaces;
+        word-break: break-word;
+    }
+}

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { appModuleAnimation } from '../../../shared/animations/routerTransition';
 import { dataChange } from '../../../shared/animations/dataUpdateTransition';
 
@@ -44,7 +44,6 @@ export class CategoryComponent {
   constructor(
     private _quizService: QuizService,
     private activatedRoute: ActivatedRoute,
-    private router: Router,
   ) {
     this.activatedRoute.params.subscribe(params => {
       this.technicalName = params['category'];
@@ -72,7 +71,7 @@ export class CategoryComponent {
         this.correctAnswers = 0;
         this.pageIndex = 0;
         this.question = this.quizData.questions[this.pageIndex];
-        
+
         this.history.forEach((question: any) => {
           question.options.forEach((option: any) => {
             option.isChosen = false;

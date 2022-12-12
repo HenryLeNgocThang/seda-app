@@ -37,7 +37,7 @@ import { MatButtonModule } from '@angular/material/button';
 // import { MatChipsModule } from '@angular/material/chips';
 import { MatIconModule } from '@angular/material/icon';
 // import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-// import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 // import { MatRippleModule } from '@angular/material/core';
 
 // Material Popups & Modals
@@ -82,7 +82,7 @@ import { MatTableModule } from '@angular/material/table';
     // MatChipsModule,
     MatIconModule,
     // MatProgressSpinnerModule,
-    // MatProgressBarModule,
+    MatProgressBarModule,
     // MatRippleModule,
     // MatBottomSheetModule,
     // MatDialogModule,
@@ -119,7 +119,7 @@ import { MatTableModule } from '@angular/material/table';
     // MatChipsModule,
     MatIconModule,
     // MatProgressSpinnerModule,
-    // MatProgressBarModule,
+    MatProgressBarModule,
     // MatRippleModule,
     // MatBottomSheetModule,
     // MatDialogModule,

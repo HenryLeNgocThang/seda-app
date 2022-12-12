@@ -9,9 +9,9 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { AppComponent } from './app.component';
 
 // Component Frameworks
-import { MaterialModule } from './material/material.module';
+import { MaterialModule } from './theme/material/material.module';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
-import { MaterialBootstrapModule } from './material-bootstrap/material-bootstrap.module';
+import { MaterialBootstrapModule } from './theme/material-bootstrap/material-bootstrap.module';
 
 // Layout components
 import { SidebarComponent } from './layout/sidebar/sidebar.component';

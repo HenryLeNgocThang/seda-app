@@ -10,13 +10,13 @@
         display: flex;
         justify-content: start;
         align-items: center;
-        color: var(--accent-color);
+        color: var(--mdb-gray-500);
         transition: all .3s ease-in-out;
         word-break: break-word;
         hyphens: auto;
         
         &:hover {
-            color: var(--accent-lighter-color);
+            color: var(--white);
         }
 
         span {

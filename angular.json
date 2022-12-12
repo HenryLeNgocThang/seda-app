@@ -34,7 +34,7 @@
             "styles": [
               "node_modules/angular-bootstrap-md/assets/scss/bootstrap/bootstrap.scss",
               "node_modules/angular-bootstrap-md/assets/scss/mdb.scss",
-              "src/app/material/material.theme.scss",
+              "src/app/theme/material/material.theme.scss",
               "src/styles.scss"
             ],
             "scripts": [
@@ -110,7 +110,7 @@
             "styles": [
               "node_modules/angular-bootstrap-md/assets/scss/bootstrap/bootstrap.scss",
               "node_modules/angular-bootstrap-md/assets/scss/mdb.scss",
-              "src/app/material/material.theme.scss",
+              "src/app/theme/material/material.theme.scss",
               "src/styles.scss"
             ],
             "scripts": []

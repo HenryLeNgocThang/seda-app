@@ -1,0 +1,28 @@
+.home-content {
+    mat-card#home-content-welcome {
+        background-color: var(--primary-color);
+        color: var(--white);
+    
+        #home-content-welcome-text {
+            text-align: center;
+    
+            @media (min-width: 768px) {
+                text-align: left;
+            }
+        }
+    
+        #home-content-welcome-button {
+            button {
+                width: 100%;
+                padding: .5rem 1.5rem;
+                margin-bottom: 3rem;
+    
+                @media (min-width: 768px) {
+                    width: auto;
+                    padding: 0.5rem 3rem;
+                    margin-bottom: 3rem;
+                }
+            }
+        }
+    }
+}

@@ -8,6 +8,16 @@
     color: var(--mdb-black) !important;
 }
 
+.quiz-button {
+    
+}
+
+video {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
 ::ng-deep {
     .mat-button-wrapper {
         pointer-events: none;

@@ -1,3 +1,117 @@
 <div [@routerTransition] class="home-content">
-    <p>home works!</p>
+  <div class="row">
+    <div class="col-12 mb-5">
+      <mat-card id="home-content-welcome">
+        <mat-card-content>
+
+          <div class="row p-4">
+            <div class="col-12 col-lg-8">
+              <div class="row">
+                <div id="home-content-welcome-text" class="col-12">
+                  <h1 class="fs-1 mb-4 lh-base">Wilkommen zurück!</h1>
+                  <p class="fs-5 mb-5 lh-base">Jetzt schnell und einfach mit dem Lernen beginnen, jederzeit und überall.
+                  </p>
+                </div>
+                <div id="home-content-welcome-button" class="col-12">
+                  <button mat-raised-button color="accent" [routerLink]="['quiz']">
+                    alle Kurse anzeigen <mat-icon aria-hidden="false" aria-label="arrow_forward icon"
+                      fontIcon="arrow_forward"></mat-icon>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div id="home-content-welcome-image" class="col-12 col-lg-4">
+              <img class="w-100" src="/assets/svg/undraw_mobile_posts_re_bpuw.svg" alt="Seda App">
+            </div>
+          </div>
+
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <div class="col-12 mb-5">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="fs-4">Beliebte Quizze</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-md-4 mb-3">
+          <mat-card>
+            <mat-card-content>
+              <h3 class="fs-5">Grundlagen 1</h3>
+              <p>Das Quiz umfasst alle Themen im Bereich Grundlagen 1.</p>
+            </mat-card-content>
+          </mat-card>
+        </div>
+        <div class="col-12 col-md-4 mb-3">
+          <mat-card>
+            <mat-card-content>
+              <h3 class="fs-5">Grundlagen 2</h3>
+              <p>Das Quiz umfasst alle Themen im Bereich Grundlagen 2.</p>
+            </mat-card-content>
+          </mat-card>
+        </div>
+        <div class="col-12 col-md-4 mb-3">
+          <mat-card>
+            <mat-card-content>
+              <h3 class="fs-5">Grundlagen 3</h3>
+              <p>Das Quiz umfasst alle Themen im Bereich Grundlagen 3.</p>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 mb-5">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="fs-4">Dein Fortschritt</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 mb-3">
+          <mat-card>
+            <mat-card-content>
+              <h3 class="fs-5">Grundlagen 1</h3>
+              <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+            </mat-card-content>
+          </mat-card>
+        </div>
+        <div class="col-12 mb-3">
+          <mat-card>
+            <mat-card-content>
+              <h3 class="fs-5">Grundlagen 2</h3>
+              <mat-progress-bar mode="determinate" value="60"></mat-progress-bar>
+            </mat-card-content>
+          </mat-card>
+        </div>
+        <div class="col-12 mb-3">
+          <mat-card>
+            <mat-card-content>
+              <h3 class="fs-5">Grundlagen 3</h3>
+              <mat-progress-bar mode="determinate" value="10"></mat-progress-bar>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 mb-5">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="fs-4">Gelöste Quizze in den letzten 7 Tagen</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 mb-3">
+          <mat-card>
+            <mat-card-content>
+              <canvas id="myChart">{{ chart }}</canvas>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
