@@ -42,7 +42,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 // Material Popups & Modals
 // import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
-// import { MatDialogModule } from '@angular/material/dialog';
+import { MatDialogModule } from '@angular/material/dialog';
 // import { MatSnackBarModule } from '@angular/material/snack-bar';
 // import { MatTooltipModule } from '@angular/material/tooltip';
 
@@ -85,7 +85,7 @@ import { MatTableModule } from '@angular/material/table';
     MatProgressBarModule,
     // MatRippleModule,
     // MatBottomSheetModule,
-    // MatDialogModule,
+    MatDialogModule,
     // MatSnackBarModule,
     // MatTooltipModule,
     MatPaginatorModule,
@@ -122,7 +122,7 @@ import { MatTableModule } from '@angular/material/table';
     MatProgressBarModule,
     // MatRippleModule,
     // MatBottomSheetModule,
-    // MatDialogModule,
+    MatDialogModule,
     // MatSnackBarModule,
     // MatTooltipModule,
     MatPaginatorModule,

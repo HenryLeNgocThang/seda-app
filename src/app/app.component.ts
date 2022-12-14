@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MatDrawerMode } from '@angular/material/sidenav';
 import { Platform } from '@angular/cdk/platform';
 
@@ -7,18 +7,16 @@ import { Platform } from '@angular/cdk/platform';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title: string = "Seda App";
   drawerToggled: boolean = false;
   mode: MatDrawerMode = "side";
 
   constructor(
-    private platform: Platform,
-  ) {
-    this.Init();
-  }
+    private platform: Platform
+  ) {}
 
-  Init(): void {
+  ngOnInit(): void {
     if (this.platform.ANDROID || this.platform.IOS) {
       this.mode = "over";
       this.drawerToggled = true;
