@@ -3,8 +3,6 @@ import { Platform } from '@angular/cdk/platform';
 import { SwUpdate, VersionReadyEvent } from '@angular/service-worker';
 import { filter, map } from 'rxjs/operators';
 
-import { MatDialog } from '@angular/material/dialog';
-
 @Component({
   selector: 'pwa',
   templateUrl: './pwa.component.html',
@@ -19,8 +17,7 @@ export class PwaComponent implements OnInit {
 
   constructor(
     private platform: Platform,
-    private swUpdate: SwUpdate,
-    private dialog: MatDialog
+    private swUpdate: SwUpdate
   ) {}
 
   ngOnInit(): void {
@@ -40,14 +37,6 @@ export class PwaComponent implements OnInit {
     }
 
     this.loadModalPwa();
-  }
-
-  openDialog() {
-    const dialogRef = this.dialog.open(PwaComponent);
-
-    // dialogRef.afterClosed().subscribe(result => {
-    //   console.log(`Dialog result: ${result}`);
-    // });
   }
 
   private updateOnlineStatus(): void {
@@ -75,8 +64,6 @@ export class PwaComponent implements OnInit {
     if (this.platform.IOS && this.platform.SAFARI) {
       const isInStandaloneMode = ('standalone' in window.navigator) && ((<any>window.navigator)['standalone']);
 
-      this.openDialog();
-      
       if (!isInStandaloneMode) {
         this.modalPwaPlatform = 'IOS';
       }
