@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { appModuleAnimation } from '../../../shared/animations/routerTransition';
 import { dataChange } from '../../../shared/animations/dataUpdateTransition';
+import { ShuffleArray } from '../../../shared/helpers/shuffleArray';
 
 import { QuizService } from '../../../services/quiz/quiz.service';
 
@@ -90,7 +91,7 @@ export class CategoryComponent {
       default:
         if (this.pageIndex < this.quizData.questions.length) {
           this.question = this.quizData.questions[this.pageIndex];
-          this.options = this.shuffle(this.question.options);
+          this.options = ShuffleArray.randoize(this.question.options);
           this.pageIndex++;
         }
         break;
@@ -116,16 +117,4 @@ export class CategoryComponent {
       return;
     }
   }
-
-  shuffle<T>(array: T[]): T[] {
-    let currentIndex = array.length, randomIndex;
-
-    while (currentIndex != 0) {
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex--;
-      [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
-    }
-  
-    return array;
-  };
 }

@@ -25,7 +25,7 @@ import { HeaderComponent } from './layout/header/header.component';
     // Layout components
     SidebarComponent,
     HeaderComponent,
-    PwaComponent,
+    PwaComponent
   ],
   imports: [
     BrowserModule,

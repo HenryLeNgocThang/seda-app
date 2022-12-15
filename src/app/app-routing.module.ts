@@ -11,16 +11,20 @@ const routes: Routes = [
     loadChildren: () => import('./main/quiz/quiz.module').then(m => m.QuizModule)
   },
   {
-    path: 'sick-note',
-    loadChildren: () => import('./main/sick-note/sick-note.module').then((m) => m.SickNoteModule),
+    path: 'absence',
+    loadChildren: () => import('./main/absence/absence.module').then((m) => m.AbsenceModule),
   },
   {
     path: 'holiday-requests',
     loadChildren: () => import('./main/holiday-requests/holiday-requests.module').then((m) => m.HolidayRequestModule),
   },
   {
-    path: 'calendar',
-    loadChildren: () => import('./main/calendar/calendar.module').then((m) => m.CalendarModule),
+    path: 'wage-certificate',
+    loadChildren: () => import('./main/wage-certificate/wage-certificate.module').then((m) => m.WageCertificateModule),
+  },
+  {
+    path: 'payroll',
+    loadChildren: () => import('./main/payroll/payroll.module').then((m) => m.PayrollModule),
   },
   {
     path: '', redirectTo: 'home', pathMatch: 'full'

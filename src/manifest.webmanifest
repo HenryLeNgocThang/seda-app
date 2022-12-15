@@ -1,9 +1,9 @@
 {
-  "name": "seda-app",
-  "short_name": "seda-app",
-  "theme_color": "#1976d2",
-  "background_color": "#fafafa",
-  "display": "standalone",
+  "name": "shopfloor-app",
+  "short_name": "shopfloor-app",
+  "theme_color": "#fff",
+  "background_color": "#fff",
+  "display": "fullscreen",
   "scope": "./",
   "start_url": "./",
   "icons": [

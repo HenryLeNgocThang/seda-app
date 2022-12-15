@@ -13,15 +13,19 @@
                   </p>
                 </div>
                 <div id="home-content-welcome-button" class="col-12">
-                  <button mat-raised-button color="accent" [routerLink]="['quiz']">
+                  <button mat-raised-button color="accent" routerLink="/quiz">
                     alle Kurse anzeigen <mat-icon aria-hidden="false" aria-label="arrow_forward icon"
                       fontIcon="arrow_forward"></mat-icon>
                   </button>
                 </div>
+                <div class="col-12">
+                  <h2>Schon gewusst?</h2>
+                  <p>{{alreadyKnew}}</p>
+                </div>
               </div>
             </div>
             <div id="home-content-welcome-image" class="col-12 col-lg-4">
-              <img class="w-100" src="/assets/svg/undraw_mobile_posts_re_bpuw.svg" alt="Seda App">
+              <img class="w-100" src="/assets/svg/undraw_mobile_posts_re_bpuw.svg" alt="Shopfloor App">
             </div>
           </div>
 

@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SickNoteComponent } from './sick-note.component';
+import { AbsenceComponent } from './absence.component';
 
 const routes: Routes = [
     {
         path: '',
-        component: SickNoteComponent,
+        component: AbsenceComponent,
         pathMatch: 'full'
     },
 ];
@@ -14,4 +14,4 @@ const routes: Routes = [
     imports: [RouterModule.forChild(routes)],
     exports: [RouterModule],
 })
-export class SickNoteRoutingModule { }
+export class AbsenceRoutingModule { }

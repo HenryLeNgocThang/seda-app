@@ -1,8 +1,8 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
 import { appModuleAnimation } from '../../shared/animations/routerTransition';
+import { ShuffleArray } from '../../shared/helpers/shuffleArray';
 
 import { Chart, registerables } from 'chart.js';
-import { MatHeaderRowDef } from '@angular/material/table';
 
 @Component({
   templateUrl: './home.component.html',
@@ -11,12 +11,22 @@ import { MatHeaderRowDef } from '@angular/material/table';
 })
 export class HomeComponent implements OnInit {
   chart: any;
+  knowledgeBase: string[] = [
+    'Die Festplattenverschlüsselung (BitLocker) muss nach dem Einschalten des Rechners eingegeben werden.',
+    'Man kann mit dem eigenen Benutzernamen (Windows) und PKI sich am Rechner anmelden.',
+    'Der Karten-Button muss bei den Anmeldeoptionen angeklickt werden, um sich mit Smartcard (=PKI) anmelden zu können.',
+    'Bei der Anmeldung mit PKI und der PIN muss das Ausweis im Leser gesteckt sein.',
+    'Klickt an auf "Other user" kann man den Benutzernamen wechseln, wenn ein anderer Benutzer angezeigt wird.'
+  ];
+  alreadyKnew: string = '';
 
   constructor(
     private elementRef: ElementRef
   ) {}
 
   ngOnInit(): void {
+    this.knowledgeBase = ShuffleArray.randoize(this.knowledgeBase);
+    this.alreadyKnew = this.knowledgeBase[Math.floor(Math.random() * this.knowledgeBase.length)]
     Chart.register(...registerables);
     this.setChart();
   }

@@ -10,7 +10,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-// import { MatRadioModule } from '@angular/material/radio';
+import { MatRadioModule } from '@angular/material/radio';
 // import { MatSelectModule } from '@angular/material/select';
 // import { MatSliderModule } from '@angular/material/slider';
 // import { MatSlideToggleModule } from '@angular/material/slide-toggle';
@@ -42,7 +42,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 // Material Popups & Modals
 // import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
-import { MatDialogModule } from '@angular/material/dialog';
+// import { MatDialogModule } from '@angular/material/dialog';
 // import { MatSnackBarModule } from '@angular/material/snack-bar';
 // import { MatTooltipModule } from '@angular/material/tooltip';
 
@@ -61,7 +61,7 @@ import { MatTableModule } from '@angular/material/table';
     MatNativeDateModule,
     MatFormFieldModule,
     MatInputModule,
-    // MatRadioModule,
+    MatRadioModule,
     // MatSelectModule,
     // MatSliderModule,
     // MatSlideToggleModule,
@@ -85,7 +85,7 @@ import { MatTableModule } from '@angular/material/table';
     MatProgressBarModule,
     // MatRippleModule,
     // MatBottomSheetModule,
-    MatDialogModule,
+    // MatDialogModule,
     // MatSnackBarModule,
     // MatTooltipModule,
     MatPaginatorModule,
@@ -98,7 +98,7 @@ import { MatTableModule } from '@angular/material/table';
     MatDatepickerModule,
     MatFormFieldModule,
     MatInputModule,
-    // MatRadioModule,
+    MatRadioModule,
     // MatSelectModule,
     // MatSliderModule,
     // MatSlideToggleModule,
@@ -122,7 +122,7 @@ import { MatTableModule } from '@angular/material/table';
     MatProgressBarModule,
     // MatRippleModule,
     // MatBottomSheetModule,
-    MatDialogModule,
+    // MatDialogModule,
     // MatSnackBarModule,
     // MatTooltipModule,
     MatPaginatorModule,

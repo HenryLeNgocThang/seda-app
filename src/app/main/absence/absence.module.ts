@@ -1,25 +1,25 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SickNoteRoutingModule } from './sick-note-routing.module';
+import { AbsenceRoutingModule } from './absence-routing.module';
 
 import { MaterialModule } from '../../theme/material/material.module';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { MaterialBootstrapModule } from '../../theme/material-bootstrap/material-bootstrap.module';
 
-import { SickNoteComponent } from './sick-note.component';
+import { AbsenceComponent } from './absence.component';
 
 @NgModule({
     declarations: [
-        SickNoteComponent
+        AbsenceComponent
     ],
     imports: [
         CommonModule,
         MaterialModule,
         MDBBootstrapModule,
         MaterialBootstrapModule,
-        SickNoteRoutingModule,
+        AbsenceRoutingModule,
         MDBBootstrapModule.forRoot(),
         MaterialBootstrapModule,
     ]
 })
-export class SickNoteModule {}
+export class AbsenceModule {}

@@ -1,0 +1,91 @@
+<div [@routerTransition] class="absence-content">
+
+  <div class="row">
+    <div class="col-12">
+      <h1>Abwesenheit</h1>
+    </div>
+    <div class="col-12">
+      <mat-card>
+        <mat-card-content>
+
+          <div class="row">
+            <div class="col-12">
+              <div class="row mb-2">
+                <div class="col-12 col-lg-6">
+                  <div class="row">
+                    <div class="col-12">
+                      <p>Neue Abwesenheit für Mustermann</p>
+                    </div>
+                    <div class="col-12 d-flex">
+                      <mat-form-field class="flex-grow-1" appearance="fill">
+                        <mat-label>Erster Tag</mat-label>
+                        <input matInput [matDatepicker]="pickerStart">
+                        <mat-datepicker #pickerStart></mat-datepicker>
+                      </mat-form-field>
+                      <mat-datepicker-toggle matIconSuffix [for]="pickerStart">
+                        <mat-icon matDatepickerToggleIcon>keyboard_arrow_right</mat-icon>
+                      </mat-datepicker-toggle>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                  <div class="row">
+                    <div class="col-12">
+                      <p>Ende bekannt</p>
+                    </div>
+                    <div class="col-12 d-flex">
+                      <mat-form-field class="flex-grow-1" appearance="fill">
+                        <mat-label>Letzter Tag</mat-label>
+                        <input matInput [matDatepicker]="pickerEnd">
+                        <mat-datepicker #pickerEnd></mat-datepicker>
+                      </mat-form-field>
+                      <mat-datepicker-toggle matIconSuffix [for]="pickerEnd">
+                        <mat-icon matDatepickerToggleIcon>keyboard_arrow_right</mat-icon>
+                      </mat-datepicker-toggle>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row mb-2">
+                <div class="col-12">
+                  <p>Art der Abwesenheit</p>
+                </div>
+                <div class="col-12">
+                  <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1">Krankheit / Unfall</mat-radio-button>
+                    <mat-radio-button value="2">Beurlaubung</mat-radio-button>
+                    <mat-radio-button value="3">Keine Angabe</mat-radio-button>
+                  </mat-radio-group>
+                </div>
+              </div>
+              <div class="row mb-2">
+                <div class="col-12">
+                  <p>Begründung</p>
+                </div>
+                <div class="col-12">
+                  <mat-form-field class="w-100" appearance="fill">
+                    <mat-label>Begründung</mat-label>
+                    <textarea matInput></textarea>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div id="dsgvo" class="row mb-2">
+                <div class="col-12">
+                  <p>Angaben zum gesundheitlichen Zustand sind freiwillig. Falls Sie entsprechende Angaben machen,
+                    willigen Sie in die Erhebung, Verarbeitung und Nutzung dieser Gesundheitsdaten nach Art. 9 Abs. 1
+                    DSGVO durch die Siemens AG ein.</p>
+                </div>
+              </div>
+              <div class="row mb-2">
+                <div class="col-12">
+                  <button mat-raised-button color="primary">Beantragen</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>

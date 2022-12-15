@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/seda-app'),
+      dir: require('path').join(__dirname, './coverage/shopfloor-app'),
       subdir: '.',
       reporters: [
         { type: 'html' },
