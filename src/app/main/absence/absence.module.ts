@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
 import { AbsenceRoutingModule } from './absence-routing.module';
 
 import { MaterialModule } from '../../theme/material/material.module';
@@ -17,6 +18,7 @@ import { AbsenceComponent } from './absence.component';
         MaterialModule,
         MDBBootstrapModule,
         MaterialBootstrapModule,
+        ReactiveFormsModule,
         AbsenceRoutingModule,
         MDBBootstrapModule.forRoot(),
         MaterialBootstrapModule,
